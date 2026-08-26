@@ -23,6 +23,10 @@ export const CANVAS_LOGICAL_WIDTH = TILE_SIZE * MAP_COLS; // 1280
 
 /** Logical canvas height derived from the tile grid. */
 export const CANVAS_LOGICAL_HEIGHT = TILE_SIZE * MAP_ROWS; // 704
+// Note: the actual canvas element is sized to 100vw × 100vh by CSS so it fills
+// the viewport. These constants represent the *game-world* coordinate space and
+// are used by the camera / viewport system to define scroll bounds — they are
+// not the physical pixel dimensions of the canvas.
 
 // ---------------------------------------------------------------------------
 // Physics

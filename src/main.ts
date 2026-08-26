@@ -29,7 +29,7 @@ function render(_alpha: number): void {
   const { width, height } = canvasManager;
 
   // Clear to cave-black each frame.
-  canvasManager.clear('#111111');
+  canvasManager.clearTo('#111111');
 
   // TODO: draw terrain, entities, HUD
   // Placeholder: draw a centred "Boulder Dash" title so something visible appears.
@@ -41,7 +41,7 @@ function render(_alpha: number): void {
 
   ctx.fillStyle = '#888888';
   ctx.font = '20px monospace';
-  ctx.fillText('engine running — alpha: ' + _alpha.toFixed(3), width / 2, height / 2 + 60);
+  ctx.fillText(`engine running — alpha: ${_alpha.toFixed(3)}`, width / 2, height / 2 + 60);
 }
 
 // ---------------------------------------------------------------------------

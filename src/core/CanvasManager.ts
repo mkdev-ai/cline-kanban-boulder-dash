@@ -73,11 +73,14 @@ export class CanvasManager {
   }
 
   /**
-   * Clear the entire canvas to a solid colour.
+   * Clear the entire canvas and fill it with a solid colour.
    * Call this at the start of each render phase.
+   *
+   * Separate from a "clip-rect clear" so the intent is unambiguous.
+   * @param fillStyle - CSS colour string; defaults to opaque black.
    */
-  clear(fillStyle: string = '#000000'): void {
-    this.ctx.fillStyle = fillStyle;
+  clearTo(fillStyle?: string): void {
+    this.ctx.fillStyle = fillStyle ?? '#000000';
     this.ctx.fillRect(0, 0, this.size.width, this.size.height);
   }
 

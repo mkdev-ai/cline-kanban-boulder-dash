@@ -4,8 +4,7 @@ node_modules/
 # Build output
 dist/
 
-# Lockfile (optional: keep if you want reproducible CI installs)
-# package-lock.json
+# package-lock.json is intentionally committed for reproducible CI installs
 
 # OS / editor noise
 .DS_Store
