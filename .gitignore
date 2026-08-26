@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# package-lock.json is intentionally committed for reproducible CI installs
+
+# OS / editor noise
+.DS_Store
+*.local
+.vscode/
+.idea/
